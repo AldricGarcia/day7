@@ -34,8 +34,8 @@ function eyeClick()
     clickEyeCount += 1;
     if(clickEyeCount >= 10)
     {
-        const left = document.querySelector(".eyes-left-iris");
-        const right = document.querySelector(".eyes-right-iris");
+        const left = document.querySelector(".eye-left-iris");
+        const right = document.querySelector(".eye-right-iris");
 
         left.style.fill = randomColor();
         right.style.fill = randomColor();
@@ -59,7 +59,7 @@ document.getElementById("robot").addEventListener("click", robotClick);
 document.getElementById("robot").addEventListener("mousemove", display);
 document.getElementById("robot-input").addEventListener("input", messageInput);
 
-document.querySelectorAll(".eyes-left-iris", ".eyes-right-iris").forEach(eye =>
+document.querySelectorAll(".eye-left-iris, .eye-right-iris").forEach(eye =>
 {
     eye.addEventListener("click", eyeClick);
 });
